@@ -90,8 +90,8 @@ class Admin:
         address = input(">>> Enter customer address: ")
 
         for customer in self.customer_list:
-            if customer.email == email:
-              print("\n >>> This email is already used. Try another email. <<< \n")
+            if customer.email.lower() == email:
+              print("\n >>> This user email already exist try different email <<< \n")
               return False
   
         self.add_new_customer(name, email, address)
