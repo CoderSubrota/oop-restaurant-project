@@ -260,7 +260,7 @@ class Customer:
     def past_orders(self):
         if not self.past_order:
             print("\n >>> Past orders are not available!\n")
-            print("\n >>> Note: You can see past orders, \n >>> After paid for your items.\n")
+            print("\n >>> Note: You can see past orders, \n")
             return
         print("\n >>> List of past orders <<< \n")
         for order in self.past_order:
