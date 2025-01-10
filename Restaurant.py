@@ -60,8 +60,7 @@ class Admin:
                 return False
 
         self.add_new_admin(name, email, address)
-        return print(">>>>> Account created successfully <<<<<")
-
+        
     @classmethod
     def add_item(self, item_name, item_price, item_quantity):
         new_item = Add_Item (item_name, item_price, item_quantity)
@@ -133,7 +132,7 @@ class Admin:
             if item.item_name == item_name:
                 item.item_price = item_price
                 print(f"\n >>> Item {item.item_name} price updated successfully!")
-                return
+                break
         print("\n >>> Item not found with the given ID.\n >>> Choose 6 to get your item ID")
 
     @classmethod
@@ -218,8 +217,6 @@ class Customer:
                 return False
 
         self.create_new_account(name, email, address)
-        print(">>> Account created successfully <<<")
-
         
 
     @classmethod
@@ -240,7 +237,7 @@ class Customer:
                     new_order = Order(item_name=item_name, item_price=item_price, item_quantity=item_quantity)
                     self.order_list.append(new_order)
                     print("\n -------- Your order has been placed successfully ------- \n")
-                    return
+                    break
                 else:
                     print("\n >>>> Item quantity is not available <<<<\n")
 
